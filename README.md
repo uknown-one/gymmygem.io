@@ -100,7 +100,7 @@ bundle exec rake release
 
 ## 🤝 Contributing
 
-Bug reports and pull requests are welcome on GitHub at [https://github.com/USERNAME/gymmygem](https://github.com/USERNAME/gymmygem).
+Bug reports and pull requests are welcome on GitHub at [https://github.com/USERNAME/gymmygem](https://github.com/Uknown-one/gymmygem.io).
 
 ---
 
