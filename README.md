@@ -73,7 +73,7 @@ Open `http://localhost:4000` in your browser.
 Clone this repo and install dependencies:
 
 ```bash
-git clone https://github.com/USERNAME/gymmygem.git
+git clone https://github.com/uknown-one/gymmygem.io.git
 cd gymmygem
 bin/setup
 ```
@@ -100,7 +100,7 @@ bundle exec rake release
 
 ## 🤝 Contributing
 
-Bug reports and pull requests are welcome on GitHub at [https://github.com/USERNAME/gymmygem](https://github.com/Uknown-one/gymmygem.io).
+Bug reports and pull requests are welcome on GitHub at [https://github.com/uknown-one/gymmygem.io].
 
 ---
 
