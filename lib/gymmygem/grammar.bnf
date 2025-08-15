@@ -1,0 +1,18 @@
+ebnf
+program         ::= statement+
+
+statement       ::= component_decl | action_decl
+
+component_decl  ::= "component" IDENTIFIER "(" IDENTIFIER ")" "{" component_body "}"
+component_body  ::= html_block+ action_decl*
+
+action_decl     ::= "action" IDENTIFIER "{" expression+ "}"
+
+html_block      ::= TAG_NAME ( "." IDENTIFIER )* "{" html_content "}"
+html_content    ::= expression | html_block+
+
+expression      ::= STRING | IDENTIFIER | function_call | interpolated_string
+
+function_call   ::= IDENTIFIER "(" (expression ("," expression)*)? ")"
+
+interpolated_string ::= '"' (STRING | "#{" expression "}")* '"'

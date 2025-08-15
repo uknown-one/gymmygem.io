@@ -1,0 +1,12 @@
+#!/usr/bin/env ruby
+require_relative '../lib/gymmygem'
+require 'optparse'
+
+filename = ARGV[0] || "examples/blog.gymmygem"
+source = File.read(filename)
+
+parser = Gymmygem::Parser.new
+ast = parser.parse(source)
+
+compiler = Gymmygem::Compiler.new(ast)
+puts compiler.compile
