@@ -14,3 +14,10 @@ puts compiler.compile
 ast_raw = parser.parse(source)
 transform =Gymmygem::Transformer.new
 ast = transformer.apply(ast_raw)
+
+begin
+  ast_raw = parser.parse(source)
+rescue Parselet::ParseFailed => error
+  puts error.parse_failure_cause.ascii_tree
+  exit 1
+end
