@@ -34,6 +34,8 @@ class Transform < Parslet::Transform
     Vireo::AST::Component.new(name.to_s, arg.to_s, body, actions)
   end
 
+  rule(component_call: subtree(:call)) { call } # Let `FunctionCall` node handle it
+
   rule(tag: simple(:tag), classes: sequence(:classes), content: sequence(:content)) do
     Vireo::AST::HtmlBlock.new(tag.to_s, classes.map(&:to_s), content)
   end
