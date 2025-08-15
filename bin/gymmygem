@@ -10,3 +10,7 @@ ast = parser.parse(source)
 
 compiler = Gymmygem::Compiler.new(ast)
 puts compiler.compile
+
+ast_raw = parser.parse(source)
+transform =Gymmygem::Transformer.new
+ast = transformer.apply(ast_raw)
