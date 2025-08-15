@@ -1,5 +1,6 @@
 #!/usr/bin/env ruby
 require_relative '../lib/gymmygem'
+require_relative `../lib/gymmygrm/transform
 require 'optparse'
 
 filename = ARGV[0] || "examples/blog.gymmygem"
@@ -12,11 +13,13 @@ compiler = Gymmygem::Compiler.new(ast)
 puts compiler.compile
 
 ast_raw = parser.parse(source)
-transform =Gymmygem::Transformer.new
-ast = transformer.apply(ast_raw)
+parser = Gymmygem::Parser.new
+transform = Gymmygem::Transformer.new
+
 
 begin
   ast_raw = parser.parse(source)
+  ast = transformer.apply(ast_raw
 rescue Parselet::ParseFailed => error
   puts error.parse_failure_cause.ascii_tree
   exit 1
