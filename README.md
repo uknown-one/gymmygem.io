@@ -1,8 +1,3 @@
-Here’s a **clean, ready-to-use** `README.md` for **Gymmygem**, assuming it’s a Ruby static site generator:
-
----
-
-````markdown
 # Gymmygem
 
 Gymmygem is a lightweight static site generator written in Ruby.  
